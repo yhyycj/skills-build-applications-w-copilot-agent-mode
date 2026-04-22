@@ -34,10 +34,16 @@ import os
 
 @api_view(['GET'])
 def api_root(request, format=None):
-    # Use the request's scheme and host to build the base URL
-    scheme = request.scheme
-    host = request.get_host()
-    base_url = f"{scheme}://{host}/api/"
+    import os
+    codespace_name = os.environ.get('CODESPACE_NAME')
+    if codespace_name:
+        # Always use https for Codespace public URL
+        base_url = f"https://{codespace_name}-8000.app.github.dev/api/"
+    else:
+        # Fallback to request's scheme and host
+        scheme = request.scheme
+        host = request.get_host()
+        base_url = f"{scheme}://{host}/api/"
     return Response({
         'teams': base_url + 'teams/',
         'users': base_url + 'users/',
