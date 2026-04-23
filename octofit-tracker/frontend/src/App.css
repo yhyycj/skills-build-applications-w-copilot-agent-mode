@@ -1,0 +1,154 @@
+/* OctoFit Tracker Custom Styles */
+
+body {
+  background: linear-gradient(135deg, #ede6ff 0%, #e0f7fa 100%);
+  color: #2d1a4a;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #863bff 0%, #47bfff 100%);
+  box-shadow: 0 2px 8px rgba(134, 59, 255, 0.08);
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.navbar .navbar-brand:hover, .navbar .nav-link:hover {
+  color: #ffe066 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #863bff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+a {
+  color: #47bfff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #863bff;
+  text-decoration: underline;
+}
+
+.table {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(134, 59, 255, 0.04);
+}
+
+.table thead {
+  background: linear-gradient(90deg, #863bff 0%, #47bfff 100%);
+  color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f3eaff;
+}
+
+.btn, .btn-primary {
+  background: linear-gradient(90deg, #863bff 0%, #47bfff 100%);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn:hover, .btn-primary:hover {
+  background: linear-gradient(90deg, #47bfff 0%, #863bff 100%);
+  color: #ffe066;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(134, 59, 255, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* OctoFit logo styling */
+.octofit-logo {
+  height: 40px;
+  margin-right: 16px;
+  vertical-align: middle;
+}
+
+@media (max-width: 576px) {
+  .octofit-logo {
+    height: 32px;
+    margin-right: 8px;
+  }
+    border-radius: 6px;
+    background: var(--social-bg);
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow);
+    }
+    .button-icon {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 8px);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+#spacer {
+  height: 88px;
+  border-top: 1px solid var(--border);
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+}
+
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4.5px;
+    border: 5px solid transparent;
+  }
+
+  &::before {
+    left: 0;
+    border-left-color: var(--border);
+  }
+  &::after {
+    right: 0;
+    border-right-color: var(--border);
+  }
+}
