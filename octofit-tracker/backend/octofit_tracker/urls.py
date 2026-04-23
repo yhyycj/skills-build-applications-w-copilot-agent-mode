@@ -32,6 +32,7 @@ router.register(r'leaderboard', views.LeaderboardViewSet)
 
 import os
 
+
 @api_view(['GET'])
 def api_root(request, format=None):
     import os
